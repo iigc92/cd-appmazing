@@ -11,7 +11,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //como genera los numeros, incrementa
-    private int id;
+    private int id; // las variables por convencion son en minusculas
     @Column
     private String name;
     @Column
