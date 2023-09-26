@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "CONTACTOS")
-public class Contactos {
+public class Contacto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //como genera los numeros, incrementa
