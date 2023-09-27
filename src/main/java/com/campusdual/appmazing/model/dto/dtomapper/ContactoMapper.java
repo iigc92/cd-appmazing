@@ -11,7 +11,7 @@ import java.util.List;
 public interface ContactoMapper {
     ContactoMapper INSTANCE = Mappers.getMapper(ContactoMapper.class);
     //necesita 3 metodos
-    ContactoDto toDTO(Contacto contacto);
-    List<ContactoDto> toDTOList(List<Contacto> contactos);
+    ContactoDto toDto(Contacto contacto);
+    List<ContactoDto> toDtoList(List<Contacto> contactos);
     Contacto toEntity(ContactoDto contactoDto);
 }

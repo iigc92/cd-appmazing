@@ -11,7 +11,7 @@ import java.util.List;
 public interface ProductMapper {
     ProductMapper INSTANCE = Mappers.getMapper(ProductMapper.class);
     //necesita 3 metodos
-    ProductDto toDTO(Product product);
-    List<ProductDto> toDTOList(List<Product> products);
-    Product toEntity(ProductDto productDTO);
+    ProductDto toDto(Product product);
+    List<ProductDto> toDtoList(List<Product> products);
+    Product toEntity(ProductDto productDto);
 }
