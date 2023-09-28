@@ -7,13 +7,13 @@ import java.util.List;
 public interface IProductService {
 
 
-    public ProductDto queryProduct(ProductDto product); //le pasamos el dto un name p.ej y el nos da toda la info
+    public ProductDto queryProduct(ProductDto productDto); //le pasamos el dto un name p.ej y el nos da toda la info
     List<ProductDto> queryAllProducts();
 
-    int insertProduct(ProductDto product);
+    int insertProduct(ProductDto productDto);
 
-    int updateProduct(ProductDto product);
+    int updateProduct(ProductDto productDto);
 
-    int deleteProduct(ProductDto product);
+    int deleteProduct(ProductDto productDto);
 
 }
