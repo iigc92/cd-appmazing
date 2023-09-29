@@ -6,9 +6,13 @@ import com.campusdual.appmazing.model.dao.ContactoDao;
 import com.campusdual.appmazing.model.dto.ContactoDto;
 import com.campusdual.appmazing.model.dto.dtomapper.ContactoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service("ContactoService")  //indica que la clase es un service
+@Lazy
 public class ContactoService implements IContactoService {
 
     @Autowired

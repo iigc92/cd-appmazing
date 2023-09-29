@@ -1,9 +1,7 @@
 package com.campusdual.appmazing.controller;
 
 import com.campusdual.appmazing.api.IContactoService;
-import com.campusdual.appmazing.api.IProductService;
 import com.campusdual.appmazing.model.dto.ContactoDto;
-import com.campusdual.appmazing.model.dto.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
