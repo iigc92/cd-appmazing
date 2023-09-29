@@ -25,6 +25,24 @@
 			"response": []
 		},
 		{
+			"name": "Test Controller Cat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:30030/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Test Controler Con",
 			"request": {
 				"method": "GET",
@@ -55,6 +73,25 @@
 					"port": "30030",
 					"path": [
 						"products",
+						"testMethod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Controller Method Cat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:30030/categories/testMethod",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"categories",
 						"testMethod"
 					]
 				}
@@ -108,6 +145,33 @@
 			"response": []
 		},
 		{
+			"name": "Test Controller Cat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Ivan",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:30030/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Test Controller con",
 			"request": {
 				"method": "POST",
@@ -141,7 +205,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "Ivan",
+					"raw": "{\r\n    \"id\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -149,13 +213,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:30030/products",
+					"raw": "localhost:30030/products/get",
 					"host": [
 						"localhost"
 					],
 					"port": "30030",
 					"path": [
-						"products"
+						"products",
+						"get"
 					]
 				}
 			},
@@ -190,6 +255,34 @@
 			"response": []
 		},
 		{
+			"name": "Contactos-R Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:30030/categories/get",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"categories",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Product -Add",
 			"request": {
 				"method": "POST",
@@ -211,6 +304,34 @@
 					"port": "30030",
 					"path": [
 						"products",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories-Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"frozen\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:30030/categories/add",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"categories",
 						"add"
 					]
 				}
@@ -274,13 +395,13 @@
 			"response": []
 		},
 		{
-			"name": "Contacto -U",
+			"name": "Category -U",
 			"request": {
 				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\":9,\r\n    \"name\": \"olive oil\",\r\n    \"stock\": 125,\r\n    \"price\": 14.45,\r\n    \"active\": true,\r\n    \"date_added\": \"2022-01-01T23:00:00.000+00:00\"\r\n}",
+					"raw": "{\r\n    \"id\":1,\r\n    \"name\": \"fruit\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -288,13 +409,41 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:30030/products/update",
+					"raw": "localhost:30030/categories/update",
 					"host": [
 						"localhost"
 					],
 					"port": "30030",
 					"path": [
-						"products",
+						"categories",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contacto -U",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 22,\r\n    \"name\": \"Ines\",\r\n    \"apellido_1\": \"Malarkey\",\r\n    \"apellido_2\": \"Fielden\",\r\n    \"email\": \"ifielden0@privacy.gov.au\",\r\n    \"telefono\": \"+55 776 699 5849\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:30030/contactos/update",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"contactos",
 						"update"
 					]
 				}
@@ -330,13 +479,41 @@
 			"response": []
 		},
 		{
+			"name": "Categories -D",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:30030/categories/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"categories",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Contacto -D",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\":21\r\n}",
+					"raw": "{\r\n    \"id\":22\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -382,6 +559,37 @@
 					"port": "30030",
 					"path": [
 						"products",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category -All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:30030/categories/getAll",
+					"host": [
+						"localhost"
+					],
+					"port": "30030",
+					"path": [
+						"categories",
 						"getAll"
 					]
 				}
