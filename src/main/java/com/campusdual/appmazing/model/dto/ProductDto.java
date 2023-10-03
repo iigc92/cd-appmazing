@@ -17,6 +17,8 @@ public class ProductDto {
 
     private Date date_added;
 
+    private CategoryDto category; //es tipo categori porque es un reguistro que esta asiocado
+
     public int getId() {
         return id;
     }
@@ -63,5 +65,13 @@ public class ProductDto {
 
     public void setDate_added(Date date_added) {
         this.date_added = date_added;
+    }
+
+    public CategoryDto getCategory() {
+        return category;
+    }
+
+    public void setCategory(CategoryDto category) {
+        this.category = category;
     }
 }

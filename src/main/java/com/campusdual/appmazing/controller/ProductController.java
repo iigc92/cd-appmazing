@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.lang.model.element.Name;
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/products") //controlador de esta clase
@@ -54,4 +56,25 @@ public class ProductController {
     public int deleteProduct(@RequestBody ProductDto product){
         return this.productService.deleteProduct(product);
     }
+
+    @PostMapping(value= "/buy5")
+    public int buyProduct(@RequestBody ProductDto productDto) {
+        return this.productService.buyProduct(productDto,5);
+    }
+
+    @PostMapping(value="/buy")
+    public int buyProduct(@RequestBody Map<String,Integer> body){
+        ProductDto productDto = new ProductDto();
+        int quantity = body.get("quantity");
+        productDto.setId(body.get("id"));
+        return this.productService.buyProduct(productDto, quantity);
+    }
+    @PostMapping(value= "/buyandshowprice")
+    public BigDecimal buyProductAndShowPrice(@RequestBody ProductDto productDto) {
+    this.productService.buyProduct(productDto, 5);
+    return this.productService.calculateTotalPrice(productDto,5);
+}
+
+
+
 }
